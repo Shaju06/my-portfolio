@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Home = () => {
+const Hero = () => {
 
     return (
         <p>Home</p>
     )
 }
 
-export default Home
+export default Hero
