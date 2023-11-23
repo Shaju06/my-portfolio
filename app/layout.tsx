@@ -19,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      <body className={`${inter.className} h-screen `}>
+      <body className={`${inter.className} h-screen bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]`}>
       <Header />
-        {children}
+      <section id='body' className=''>
+        <div className='container mx-auto flex'>
+      {children}
+      </div>
+      </section>
         <Footer />
           </body>
       

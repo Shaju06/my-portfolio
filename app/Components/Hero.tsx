@@ -1,12 +1,13 @@
 import React from "react";
 import Projects from "./Projects";
 import ContactUs from "./Contactus";
+import Skills from "./Skills";
 
 const Hero = () => {
   return (
 	<>
-    <section id='home-section' className="hero pt-14 bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] min-h-[700px]">
-		<div className="container min-h-800 ">
+    <section id='home-section' className="mt-24 pt-14">
+		<div className="min-h-800 ">
 		<div className="text-black">
         <p>Hello, my name is</p>
 		<div className='flex flex-row gap-4'>
@@ -26,6 +27,7 @@ const Hero = () => {
       
     </section>
 <Projects />
+<Skills />
 <ContactUs />
 	</>
   );
