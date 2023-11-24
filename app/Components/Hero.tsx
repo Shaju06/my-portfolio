@@ -1,6 +1,6 @@
 import React from "react";
 import Projects from "./Projects";
-import ContactUs from "./Contactus";
+import Contact from "./Contact";
 import Skills from "./Skills";
 
 const Hero = () => {
@@ -8,7 +8,7 @@ const Hero = () => {
 	<>
     <section id='home-section' className="mt-24 pt-14">
 		<div className="min-h-800 ">
-		<div className="text-black">
+		<div className="text-[#333333]">
         <p>Hello, my name is</p>
 		<div className='flex flex-row gap-4'>
 		<h1 className="text-xxl md:text-5xl font-black leading-none pb-4 md:pb-8">Varinder Pal Singh</h1>
@@ -28,7 +28,7 @@ const Hero = () => {
     </section>
 <Projects />
 <Skills />
-<ContactUs />
+<Contact />
 	</>
   );
 };
