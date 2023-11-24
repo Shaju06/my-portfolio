@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      <body className={`${inter.className} h-screen bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]`}>
+      <body className={`${inter.className} h-screen bg-light-Secondary dark:dark-Seconday`}>
       <Header />
       <section id='body' className=''>
         <div className='container mx-auto flex'>

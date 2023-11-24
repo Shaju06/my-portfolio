@@ -19,8 +19,16 @@ const config: Config = {
         },
       },
       colors: {
-        // primary: 'bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]',
-        primary: 'radial-gradient(from 180deg at 50% 50%, #fbc2eb, #a6c1ee)'
+        light: {
+          Primary: '#ff9966',
+          Secondary: '#fff8e7',
+          Accent: "#333333"
+        },
+        dark: {
+          Primary: '#008080',
+          Secondary: '#2c3e50',
+          Accent: '#ecf0f1 '
+        }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -30,5 +38,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: "class",
 }
 export default config
