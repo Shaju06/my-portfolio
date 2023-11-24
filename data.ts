@@ -1,0 +1,17 @@
+export const  skillsSet = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Redux",
+    "GraphQL",
+    "Apollo",
+    "Node.js",
+    "Next.js",
+    "Git",
+    "Tailwind",
+    "MongoDB",
+    "Express",
+    "Framer Motion",
+  ] as const;

@@ -2,6 +2,31 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import NavLink from "./NavLink";
+import MobileMenuBar from "./MobileMenuBar";
+
+const navLinks = [
+  {
+    title: 'Home',
+    path: '#home-section'
+  },
+  {
+    title: 'About',
+    path: '#about-me-section'
+  },
+  {
+    title: 'Projects',
+    path: '#project-section'
+  },
+  {
+    title: 'Skills',
+    path: '#my-skills-section'
+  },
+  {
+    title: 'Contact',
+    path: '#my-skills-section'
+  }
+]
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,34 +36,51 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white h-16 sticky top-0">
-      <nav className="flex justify-between h-full items-center w-5/6 mx-auto">
-        <div className="w-16">
-          <h1 className="font-bold">Portfolio</h1>
-        </div>
-        <div className="md:static absolute md:min-h-fit bg-white min-h-[60vh] left-0 top-[9%] md:w-auto w-full flex items-center px-5">
-          <ul className="flex md:gap-[4vw] gap-8 md:flex-row sm:flex-col">
-            <li className="cursor-pointer hover:text-gray-500">
-              <Link href="#home-section">Home</Link>
-            </li>
-            <li className="cursor-pointer hover:text-gray-500">
-              <Link href="#about-me-section">About me</Link>
-            </li>
-            <li className="cursor-pointer hover:text-gray-500">
-              <Link href="#about-me-section">Projects</Link>
-            </li>
-            <li className="cursor-pointer hover:text-gray-500">
-              <Link href="#about-me-section">Contact</Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <button className="bg-blue-600 text-white px-5 py-3">
-            Download Resume
-          </button>
-        </div>
+    // <header className="">
+      <nav className="fixed mx-auto  top-0 left-0 right-0 z-10 bg-white bg-opacity-100">
+      <div className="flex container lg:py-2 items-center justify-between mx-auto px-4 py-2">
+      <h1 className="font-bold text-2xl">Portfolio</h1>
+    <div className="md:hidden">
+{
+  !isMobileMenuOpen ? (
+
+  <div 
+  className="w-5 h-5"
+  onClick={() => setIsMobileMenuOpen(true)}
+  >
+    <HiMenu /> 
+    </div> 
+  ): (
+    <div
+    onClick={() => setIsMobileMenuOpen(false)}
+    >
+ <HiX />
+      </div>
+  )
+ 
+}
+    </div>
+    <div className="bg-white hidden md:flex justify-center items-center left-0   w-full  px-8">
+      <ul className="flex md:gap-[4vw] gap-8 md:flex-row sm:flex-col px-10">
+      {
+        navLinks.map((item)=> (
+          <NavLink key={item.title} title={item.title} href={item.path} />
+        ))
+      }
+      </ul>
+      <div>
+      <button className="bg-blue-600 text-white px-5 py-3">
+        Download Resume
+      </button>
+    </div>
+    </div>
+
+      </div>
+        {
+          isMobileMenuOpen ? <MobileMenuBar links={navLinks} /> : null
+        }
       </nav>
-    </header>
+    // </header>
   );
 };
 
