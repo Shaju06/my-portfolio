@@ -18,7 +18,9 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const localTheme = window.localStorage.getItem("theme") as Theme | "light";
+
+  const [theme, setTheme] = useState<Theme>(localTheme);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -33,8 +35,6 @@ export default function ThemeContextProvider({
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
     if (localTheme) {
       setTheme(localTheme);
 
