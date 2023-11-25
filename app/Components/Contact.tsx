@@ -8,9 +8,9 @@ import SubmitBtn from './SubmitButton'
 const Contact = () => {
 
     return (
-        <motion.section id='contact-us' className='text-center mt-6  min-h-[500px]'>
-        <h1 className='text-[24px] border-b-4 border-blue-600 inline-block pb-1 mb-20'>Contact us</h1>
-        <p className="text-gray-700 -mt-6 dark:text-white/80">
+        <motion.section id='contact-us' className='text-center mt-6 text-light-Accent dark:text-dark-Accent min-h-[500px]'>
+        <h1 className='text-[24px] border-b-4 border-light-Primary dark:border-dark-Primary inline-block pb-1 mb-10'>Contact us</h1>
+        <p className="mt-1 text-light-Primary dark:text-dark-Primary">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:example@gmail.com">
           example@gmail.com
@@ -22,10 +22,10 @@ const Contact = () => {
       >
         <input 
         type='text' 
-        className='h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none'
+        className='h-14 px-4 rounded-lg   text-light-Accent dark:text-light-Accent outline-light-Primary dark:bg-dark-Accent dark:outline-dark-Primary transition-all'
         placeholder='Type subject'  />
          <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-dark-Primary dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg text-light-Accent dark:text-light-Accent  p-4 dark:bg-dark-Accent dark:bg-opacity-80 outline-light-Primary dark:outline-dark-Primary transition-all "
           name="message"
           placeholder="Your message"
           required

@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import ThemeModeSwitch from './Components/ThemeModeSwitch'
+import ThemeContextProvider from '@/Context/Theme'
+import ActiveSectionContextProvider from '@/Context/ActiveLinkContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
      
-      <body className={`${inter.className} h-screen bg-light-Secondary dark:dark-Seconday`}>
+      <body className={`${inter.className} h-screen bg-light-Secondary dark:bg-dark-Secondary`}>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
       <Header />
       <section id='body' className=''>
         <div className='container mx-auto flex'>
@@ -27,6 +32,9 @@ export default function RootLayout({
       </div>
       </section>
         <Footer />
+        <ThemeModeSwitch />
+        </ActiveSectionContextProvider>
+        </ThemeContextProvider>
           </body>
       
     </html>
