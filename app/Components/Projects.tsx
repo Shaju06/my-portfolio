@@ -1,19 +1,30 @@
-'use client'
+"use client";
 
-import React, {useState} from 'react'
-
+import React, { useState } from "react";
+import SectionHeading from "./SectionHeading";
+import { projects } from "@/lib/data";
+import Project from "./Project";
+import { useSectionInView } from "@/lib/customHooks";
 
 const Projects = () => {
-   
+  const { ref } = useSectionInView("Projects", 0.5);
 
-    return (
-        <section id='projects' className='text-center mt-[6rem] text-light-Accent dark:text-dark-Accent min-h-[500px]'>
-            <h1 className='text-[24px] border-b-4 border-light-Primary dark:border-dark-Primary inline-block pb-1 mb-20'>Projects</h1>
-            <div className='text-[48px]'>
-                Coming Soon
-            </div>
-        </section>
-    )
-}
+  return (
+    <section
+      ref={ref}
+      id="projects"
+      className="text-center scroll-mt-28 mb-28 text-light-Accent dark:text-dark-Accent  pt-20"
+    >
+      <SectionHeading>Projects</SectionHeading>
+      <div className="grid  gap-4">
+        {projects.map((project, index) => (
+          <React.Fragment key={index}>
+            <Project {...project} />
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;
