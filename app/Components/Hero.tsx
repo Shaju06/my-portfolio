@@ -6,7 +6,7 @@ import Skills from "./Skills";
 const Hero = () => {
   return (
     <>
-      <section id="home-section" className="pt-24">
+      <section id="home-section" className="pt-20">
         <div className="min-h-800 ">
           <div className="text-light-Accent dark:text-dark-Accent">
             <p>Hello, my name is</p>

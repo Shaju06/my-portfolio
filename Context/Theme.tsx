@@ -18,7 +18,10 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const localTheme = window.localStorage.getItem("theme") as Theme | "light";
+  const localTheme =
+    typeof window !== "undefined"
+      ? (window.localStorage.getItem("theme") as Theme | "light")
+      : "light";
 
   const [theme, setTheme] = useState<Theme>(localTheme);
 
