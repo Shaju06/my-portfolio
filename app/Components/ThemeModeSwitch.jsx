@@ -11,7 +11,6 @@ const ThemeModeSwitch = () => {
     <button
       className="fixed flex justify-center items-center bottom-6 w-12 h-12  right-6  rounded-full bg-light-Primary dark:bg-dark-Primary"
       onClick={() => {
-        console.log("clicked!");
         toggleTheme();
       }}
     >
