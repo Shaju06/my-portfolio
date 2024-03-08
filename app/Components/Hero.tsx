@@ -1,7 +1,17 @@
 import React from "react";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import Skills from "./Skills";
+import dynamic from "next/dynamic";
+
+const Skills = dynamic(() => import("./Skills"), {
+  loading: () => <p>Loading...</p>,
+});
+
+const Contact = dynamic(() => import("./Contact"), {
+  loading: () => <p>Loading...</p>,
+});
+
+const Projects = dynamic(() => import("./Projects"), {
+  loading: () => <p>Loading...</p>,
+});
 
 const Hero = () => {
   return (
