@@ -3,8 +3,12 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import NavLink from "./NavLink";
-import MobileMenuBar from "./MobileMenuBar";
 import { navLinks } from "@/lib/data";
+import dynamic from "next/dynamic";
+
+const MobileMenuBar = dynamic(() => import("./MobileMenuBar"), {
+  loading: () => <p>Loading...</p>,
+});
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

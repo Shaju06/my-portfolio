@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import SectionHeading from "./SectionHeading";
 import { projects } from "@/lib/data";
 import Project from "./Project";
@@ -8,7 +8,6 @@ import { useSectionInView } from "@/lib/customHooks";
 
 const Projects = () => {
   const { ref } = useSectionInView("Projects", 0.5);
-
   return (
     <section
       ref={ref}

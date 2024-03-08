@@ -39,7 +39,7 @@ export default function Project({
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-light-Primary/[0.7] dark:bg-dark-Primary/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="bg-light-Primary/[0.7] dark:bg-dark-Primary/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider  rounded-full dark:text-white/80"
                 key={index}
               >
                 {tag}
@@ -47,7 +47,6 @@ export default function Project({
             ))}
           </ul>
         </div>
-
         <Image
           src={imageUrl}
           alt="Project I worked on"
@@ -58,11 +57,9 @@ export default function Project({
         group-hover:-translate-x-3
         group-hover:translate-y-3
         group-hover:-rotate-2
-
         group-even:group-hover:translate-x-3
         group-even:group-hover:translate-y-3
         group-even:group-hover:rotate-2
-
         group-even:right-[initial] group-even:-left-40"
         />
       </section>
