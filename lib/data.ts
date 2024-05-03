@@ -16,6 +16,9 @@ export const skillsSet = [
   "MongoDB",
   "Express",
   "Framer Motion",
+  "SQL",
+  "MySql",
+  "MongoDB",
 ] as const;
 
 export const navLinks = [

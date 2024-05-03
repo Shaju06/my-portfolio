@@ -23,11 +23,11 @@ const Contact = () => {
       <form className="flex flex-col justify-center mt-10">
         <input
           type="text"
-          className="h-14 px-4 rounded-lg   text-light-Accent dark:text-light-Accent outline-light-Primary bg-indigo-100   dark:outline-dark-Primary transition-all"
+          className="h-14 px-4 rounded-lg   text-light-Accent dark:text-light-Accent  border-gray-200  dark:outline-dark-Primary transition-all"
           placeholder="Type subject"
         />
         <textarea
-          className="h-52 my-3 rounded-lg text-indigo-200 dark:text-light-Accent  p-4 bg-indigo-100  outline-light-Primary dark:outline-dark-Primary transition-all "
+          className="h-52 my-3 rounded-lg text-indigo-200 dark:text-light-Accent  p-4  outline-light-Primary dark:outline-dark-Primary transition-all "
           name="message"
           placeholder="Your message"
           required
