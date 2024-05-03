@@ -29,7 +29,7 @@ const Skills = () => {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsSet.map((skill, index) => (
           <motion.li
-            className=" borderBlack rounded-xl px-5 py-3 bg-light-Primary/20 dark:bg-dark-Primary/20 dark:text-white/80"
+            className=" borderBlack rounded-xl px-5 py-3 bg-indigo-300 text-white/80 dark:text-black/80"
             key={index}
             aria-label={skill}
             variants={fadeInAnimationVariants}

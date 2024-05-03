@@ -18,9 +18,8 @@ const Header = () => {
   };
 
   return (
-    <nav className="fixed mx-auto text-light-Accent dark:text-dark-Accent  top-0 left-0 right-0 z-10 backdrop-blur">
-      <div className="flex container lg:py-2 items-center justify-between mx-auto px-4 py-2">
-        <h1 className="font-bold text-2xl">Portfolio</h1>
+    <nav className="sticky mx-auto text-light-Accent dark:text-dark-Accent  flex justify-center  top-0 left-0 right-0 z-10 backdrop-blur border-b border-slate-900/10 dark:border-white/10">
+      <div className="flex container lg:py-2 items-center h-16 justify-between mx-auto px-4 py-2">
         <div className="w-5 h-5 md:hidden">
           {isMobileMenuOpen ? (
             <HiX onClick={toggleMobileMenu} />
