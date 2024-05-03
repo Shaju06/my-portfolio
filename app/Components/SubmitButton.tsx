@@ -12,7 +12,7 @@ export default function SubmitBtn() {
   return (
     <button
       type="submit"
-      className="group flex items-center justify-center gap-2 float-right h-[3rem] w-[8rem] bg-indigo-500  text-white/80  rounded-full outline-none transition-all focus:scale-110 hover:scale-110  active:scale-105  disabled:scale-100 disabled:bg-opacity-65"
+      className="group flex items-center justify-center gap-2 float-right h-[3rem] w-[8rem] bg-primary  text-white/80  rounded-full outline-none transition-all focus:scale-110 hover:scale-110  active:scale-105  disabled:scale-100 disabled:bg-opacity-65"
       disabled={pending}
     >
       {pending ? (
@@ -20,7 +20,7 @@ export default function SubmitBtn() {
       ) : (
         <>
           Submit{" "}
-          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+          <FaPaperPlane className="text-xs  transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
         </>
       )}
     </button>

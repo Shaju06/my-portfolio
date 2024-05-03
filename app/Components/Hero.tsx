@@ -26,7 +26,7 @@ const Hero = () => {
               src={myImage}
               alt="Project I worked on"
               // quality={95}
-              className="w-[250px] h-[250px]  rounded-full animate-curve border-indigo-500 "
+              className="w-[250px] h-[250px]  rounded-full animate-curve border-primary"
             />
           </div>
           <div className="text-light-Accent dark:text-dark-Accent flex justify-normal flex-col">

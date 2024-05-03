@@ -34,14 +34,17 @@ const config: Config = {
       },
       colors: {
         "text-color": "#6366f1",
+        primary: "#22c55e",
         light: {
-          Primary: "black",
+          background: "#fff",
+          Primary: "#16a34a",
           Secondary: "#4f46e5",
           Accent: "#64748b",
           "text-color": "#6366f1",
         },
         dark: {
-          Primary: "",
+          background: "#0a0a0a",
+          Primary: "#16a34a",
           Secondary: "#4f46e5",
           Accent: "#e2e8f0",
         },

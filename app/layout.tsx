@@ -7,6 +7,7 @@ import ThemeContextProvider from "@/Context/Theme";
 import ActiveSectionContextProvider from "@/Context/ActiveLinkContext";
 
 import dynamic from "next/dynamic";
+import ErrorBoundary from "./Components/ErrorBoundary";
 
 const Footer = dynamic(() => import("./Components/Footer"), {
   loading: () => <p>Loading...</p>,
@@ -35,16 +36,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} h-screen bg-white dark:bg-slate-800`}
+        className={`${inter.className} h-screen bg-light-background dark:bg-dark-background`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
-            <div className="container mx-auto flex justify-center">
-              {children}
-            </div>
-            <Footer />
-            <ThemeModeSwitch />
+            <ErrorBoundary>
+              <Header />
+              <div className="container mx-auto flex justify-center">
+                {children}
+              </div>
+              <Footer />
+              <ThemeModeSwitch />
+            </ErrorBoundary>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
