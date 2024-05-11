@@ -11,7 +11,7 @@ const Projects = () => {
   return (
     <section
       ref={ref}
-      id="projects"
+      id="project-section"
       className="text-center scroll-mt-28 mb-28 text-light-Accent dark:text-dark-Accent  pt-20"
     >
       <SectionHeading>Projects</SectionHeading>

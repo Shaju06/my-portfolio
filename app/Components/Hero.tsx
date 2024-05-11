@@ -3,6 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import myImage from "@/public/varinder.png";
+import { useSectionInView } from "@/lib/customHooks";
 
 const Skills = dynamic(() => import("./Skills"), {
   loading: () => <p>Loading...</p>,
@@ -17,9 +18,15 @@ const Projects = dynamic(() => import("./Projects"), {
 });
 
 const Hero = () => {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
     <>
-      <section id="home-section" className="pt-10 min-h-800">
+      <section
+        ref={ref}
+        id="home-section"
+        className="pt-10 min-h-800 scroll-mt-[100rem]"
+      >
         <div className="flex flex-col justify-center">
           <div className="flex justify-center mb-5">
             <Image

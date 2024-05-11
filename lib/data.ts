@@ -36,11 +36,11 @@ export const navLinks = [
   },
   {
     title: "Skills",
-    path: "#my-skills-section",
+    path: "#skills-section",
   },
   {
     title: "Contact",
-    path: "#my-skills-section",
+    path: "#contact-us",
   },
 ] as const;
 
