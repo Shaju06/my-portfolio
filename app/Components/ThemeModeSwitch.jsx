@@ -9,7 +9,7 @@ const ThemeModeSwitch = () => {
   return (
     <button
       aria-label="theme-switch-button"
-      className="fixed flex justify-center items-center bottom-6 w-12 h-12  right-6  rounded-full bg-primary"
+      className="fixed flex justify-center items-center bottom-6 w-12 h-12  right-6  rounded-full bg-primary transition-all  hover:scale-110 hover:bg-hover-primary hover:text-white"
       onClick={() => {
         toggleTheme();
       }}
