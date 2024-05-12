@@ -8,7 +8,7 @@ import { useMenuAnimation } from "@/lib/customHooks";
 type MobileMenuBarPropTypes = {
   links: ReadonlyArray<{
     path: string;
-    title: "Home" | "About" | "Projects" | "Skills" | "Contact";
+    title: "Home" | "About" | "Projects" | "Skills" | "Experience" | "Contact";
   }>;
 };
 

@@ -12,7 +12,7 @@ const Projects = () => {
     <section
       ref={ref}
       id="project-section"
-      className="text-center scroll-mt-28 mb-28 text-light-Accent dark:text-dark-Accent  pt-20"
+      className="text-center scroll-mt-20 mb-20 text-light-Accent dark:text-dark-Accent  pt-10"
     >
       <SectionHeading>Projects</SectionHeading>
       <div className="grid  gap-4">

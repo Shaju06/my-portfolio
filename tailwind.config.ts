@@ -33,8 +33,8 @@ const config: Config = {
         },
       },
       colors: {
-        "text-color": "#6366f1",
         primary: "#22c55e",
+        "hover-primary": "#15803d",
         light: {
           background: "#fff",
           Primary: "#16a34a",

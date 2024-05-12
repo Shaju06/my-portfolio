@@ -6,15 +6,13 @@ import clsx from "clsx";
 
 type NavLinkPropsTypes = {
   href: string;
-  title: "Home" | "About" | "Projects" | "Skills" | "Contact";
+  title: "Home" | "About" | "Projects" | "Skills" | "Experience" | "Contact";
 };
 
 const NavLink: FC<NavLinkPropsTypes> = (props) => {
   const { href, title } = props;
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveLinkContext();
-
-  console.log(activeSection, "activeSection");
 
   return (
     <motion.li
