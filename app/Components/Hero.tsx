@@ -3,7 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import myImage from "@/public/varinder.png";
-import { useSectionInView } from "@/lib/customHooks";
+import { useSectionInView, useTypingText } from "@/lib/customHooks";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useActiveLinkContext } from "@/Context/ActiveLinkContext";
@@ -14,6 +14,12 @@ import { HiDownload } from "react-icons/hi";
 const Hero = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveLinkContext();
+  const textArray = [
+    "Frontend developer",
+    "Backend developer",
+    "Full-stack developer",
+  ];
+  const typingText = useTypingText(textArray);
 
   return (
     <>
@@ -24,25 +30,47 @@ const Hero = () => {
       >
         <div className="flex flex-col justify-center">
           <div className="flex justify-center mb-5">
-            <Image
-              src={myImage}
-              alt="Project I worked on"
-              // quality={95}
-              priority
-              className="w-[250px] h-[250px]  rounded-full animate-curve border-primary"
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                type: "tween",
+                duration: 0.2,
+              }}
+            >
+              <Image
+                src={myImage}
+                alt="Project I worked on"
+                // quality={95}
+                priority
+                className="w-[250px] h-[250px]  rounded-full animate-curve border-primary"
+              />
+            </motion.div>
           </div>
-          <div className="text-light-Accent dark:text-dark-Accent flex justify-normal flex-col">
+          <motion.div
+            className="text-light-Accent dark:text-dark-Accent flex justify-normal flex-col"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <h1 className="text-xxl text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
               Varinder Pal Singh
             </h1>
-            <h1 className="text-xxl text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="text-xxl text-light-Primary/80 text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
+                {typingText}
+              </h1>
+            </motion.div>
+            {/* <h1 className="text-xxl text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
               Full Stack
-            </h1>
+            </h1> */}
             {/* <div className=" grid grid-cols-2 gap-4 mt-[100px] relative"> */}
             <p className="">
               I am &nbsp;
-              <span className="font-bold text-light-Primary dark:text-dark-Primary">
+              <span className="font-bold text-light-Primary/80 dark:text-dark-Primary">
                 Full-stack Developer &nbsp;
               </span>
               based in India, skilled at crafting websites and applications
@@ -57,7 +85,7 @@ const Hero = () => {
             </p>
 
             {/* </div> */}
-          </div>
+          </motion.div>
         </div>
         <motion.div
           className="flex items-center flex-col sm:flex-row justify-center mt-8  gap-2 px-4 text-lg font-medium"

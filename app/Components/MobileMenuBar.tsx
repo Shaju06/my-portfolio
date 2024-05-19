@@ -25,7 +25,7 @@ const MobileMenuBar: FC<MobileMenuBarPropTypes> = ({ links }) => {
     <>
       <div ref={scope} className=" flex justify-end h-5 md:hidden ">
         {isMobileMenuOpen ? (
-          <div className="h-screen absolute left-0 w-[150px] top-0 right-0 bg-primary">
+          <div className="h-screen absolute left-0 w-[200px] top-0 right-0 bg-primary">
             <HiX
               onClick={toggleMobileMenu}
               className=" absolute top-4 right-4 "

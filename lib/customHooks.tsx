@@ -1,5 +1,5 @@
 import { useActiveLinkContext } from "@/Context/ActiveLinkContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import type { SectionName } from "./types";
 import { useAnimate, stagger } from "framer-motion";
@@ -63,4 +63,37 @@ export function useMenuAnimation(isOpen: boolean) {
   }, [isOpen]);
 
   return scope;
+}
+
+export function useTypingText(textArray: string[], speed = 150, delay = 1000) {
+  const [index, setIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopIndex, setLoopIndex] = useState(0);
+
+  useEffect(() => {
+    let timer: any;
+    const handleTyping = () => {
+      const currentText = textArray[index];
+      if (isDeleting) {
+        setDisplayedText(currentText.substring(0, displayedText.length - 1));
+        if (displayedText.length === 0) {
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % textArray.length);
+        }
+      } else {
+        setDisplayedText(currentText.substring(0, displayedText.length + 1));
+        if (displayedText.length === currentText.length) {
+          setIsDeleting(true);
+          setLoopIndex((prev) => prev + 1);
+          timer = setTimeout(() => {}, delay); // Pause before deleting
+        }
+      }
+    };
+
+    timer = setTimeout(handleTyping, isDeleting ? speed / 2 : speed);
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, index, textArray, speed, delay]);
+
+  return displayedText;
 }
