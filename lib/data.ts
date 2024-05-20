@@ -31,10 +31,6 @@ export const navLinks = [
     path: "#home-section",
   },
   {
-    title: "About",
-    path: "#about-me-section",
-  },
-  {
     title: "Projects",
     path: "#project-section",
   },
