@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 type NavLinkPropsTypes = {
   href: string;
-  title: "Home" | "About" | "Projects" | "Skills" | "Experience" | "Contact";
+  title: "Home" | "Projects" | "Skills" | "Experience" | "Contact";
 };
 
 const NavLink: FC<NavLinkPropsTypes> = (props) => {

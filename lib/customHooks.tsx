@@ -86,7 +86,7 @@ export function useTypingText(textArray: string[], speed = 150, delay = 1000) {
         if (displayedText.length === currentText.length) {
           setIsDeleting(true);
           setLoopIndex((prev) => prev + 1);
-          timer = setTimeout(() => {}, delay); // Pause before deleting
+          timer = setTimeout(() => {}, delay);
         }
       }
     };
