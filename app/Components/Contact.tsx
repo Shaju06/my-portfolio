@@ -2,11 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import SubmitBtn from "./SubmitButton";
 import SectionHeading from "./SectionHeading";
 import { useSectionInView } from "@/lib/customHooks";
-import toast from "react-hot-toast";
-import { sendEmail } from "@/actions/sendEmail";
+import { MdOutlineEmail } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact");
@@ -29,42 +29,31 @@ const Contact = () => {
         once: true,
       }}
     >
-      <SectionHeading>Contact us</SectionHeading>
-
-      <p className="mt-1 text-black/80 dark:text-white/80">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          varipaul@gmail.com
-        </a>{" "}
-        or through this form.
-      </p>
-      <form
-        className="flex flex-col justify-center mt-10"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
-      >
-        <input
-          type="text"
-          className="h-14 px-4 rounded-lg border-2 border-primary/70  outline-light-Primary dark:outline-dark-Primary transition-all focus:-outline-offset-1 "
-          placeholder="Type subject"
-        />
-        <textarea
-          className="h-52 my-3 rounded-lg border-2 border-primary/70   p-4  outline-light-Primary dark:outline-dark-Primary transition-all focus:-outline-offset-1"
-          name="message"
-          placeholder="Your message"
-          required
-          maxLength={5000}
-        />
-        <SubmitBtn />
-      </form>
+      <SectionHeading>Contact Me</SectionHeading>
+      <div className="flex justify-center">
+        <div className=" flex justify-center gap-2 items-center  border border-zinc-500 rounded-3xl p-[1.5rem]   dark:text-white/80">
+          <Link
+            href="mailto:Varipaul@gmail.com"
+            className="flex justify-center items-center gap-2"
+          >
+            <p className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
+              <MdOutlineEmail />
+            </p>
+            <p className="mr-2">Varipaul@gmail.com </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/varinder-pal-singh-4896b743/"
+            className="flex justify-center items-center gap-2"
+            target="_blank"
+          >
+            <p className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
+              {" "}
+              <BsLinkedin />
+            </p>
+            <p>Linkedin</p>
+          </Link>
+        </div>
+      </div>
     </motion.section>
   );
 };
