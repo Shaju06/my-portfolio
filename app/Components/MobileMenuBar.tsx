@@ -1,7 +1,7 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import NavLink from "./NavLink";
-import { stagger, useAnimate } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
+import { MdHome } from "react-icons/md";
 import { useMenuAnimation } from "@/lib/customHooks";
 import { useActiveLinkContext } from "@/Context/ActiveLinkContext";
 
@@ -9,6 +9,7 @@ type MobileMenuBarPropTypes = {
   links: ReadonlyArray<{
     path: string;
     title: "Home" | "Projects" | "Skills" | "Experience" | "Contact";
+    icon?: React.ReactElement;
   }>;
 };
 
@@ -24,26 +25,31 @@ const MobileMenuBar: FC<MobileMenuBarPropTypes> = ({ links }) => {
 
   return (
     <>
-      <div ref={scope} className=" flex justify-end h-5 md:hidden ">
+      <div ref={scope} className="flex justify-end h-5 md:hidden ">
         {isMobileMenuOpen ? (
           <>
             <div
-              className="fixed inset-0 bg-black/20 backdrop-blur-md dark:bg-background-dark/80 w-full min-h-screen"
+              className="fixed inset-0 bg-black/60 backdrop-blur-lg dark:bg-background-dark/80 w-full min-h-screen"
               aria-hidden="true"
               onClick={toggleMobileMenu}
             ></div>
-            <div className="h-screen fixed left-0 w-[200px] top-0 right-0 bg-white dark:bg-black ">
-              <HiX
-                onClick={toggleMobileMenu}
-                className=" absolute top-4 right-4 "
-              />
-              <ul className="flex flex-col px-10 py-20 space-y-4 items-center h-full">
+
+            <div className="h-screen fixed left-0 w-[300px] top-0 right-0 bg-white dark:bg-black flex items-center justify-center">
+              <div className="border absolute top-4 right-4 border-gray-600 dark:border-white text-2xl">
+                <HiX onClick={toggleMobileMenu} />
+              </div>
+              <ul className="flex flex-col space-y-4 items-center py-20">
                 {links.map((item) => (
-                  <NavLink
-                    key={item.title}
-                    href={item.path}
-                    title={item.title}
-                  />
+                  <li key={item.title} className="py-2">
+                    {" "}
+                    {/* Add vertical padding to each li */}
+                    <NavLink
+                      href={item.path}
+                      title={item.title}
+                      toggleMobileMenu={toggleMobileMenu}
+                      Icon={item.icon}
+                    />
+                  </li>
                 ))}
               </ul>
             </div>

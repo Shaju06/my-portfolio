@@ -2,7 +2,9 @@ import corpcommentImg from "@/public/corpcomment.png";
 import React, { createElement } from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { MdHome } from "react-icons/md";
+import { AiFillProject } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
 
 export const skillsSet = [
   "HTML",
@@ -29,22 +31,27 @@ export const navLinks = [
   {
     title: "Home",
     path: "#home-section",
+    icon: MdHome,
   },
   {
     title: "Projects",
     path: "#project-section",
+    icon: AiFillProject,
   },
   {
     title: "Skills",
     path: "#skills-section",
+    icon: FaReact,
   },
   {
     title: "Experience",
     path: "#experience",
+    icon: CgWorkAlt,
   },
   {
     title: "Contact",
     path: "#contact-us",
+    icon: MdEmail,
   },
 ] as const;
 
@@ -77,7 +84,7 @@ export const experiencesData = [
     comapany: "Sapiens Technologies",
     title: "Software developer",
     description: `I'm working as software developer mainly on nextjs and mongodb. Responsible to design and develope inaurance related features to the products.`,
-    icon: React.createElement(CgWorkAlt),
+    icon: createElement(CgWorkAlt),
     date: "2023 - present",
   },
   {
@@ -85,7 +92,7 @@ export const experiencesData = [
     title: "Frontend developer",
     description:
       "Worked as frontend dev, migrated backbone product to nextjs and implement new feature to it from the scratch.",
-    icon: React.createElement(CgWorkAlt),
+    icon: createElement(CgWorkAlt),
     date: "2022 - 2023",
   },
   {
@@ -93,7 +100,7 @@ export const experiencesData = [
     title: "Full-stack developer",
     description:
       "Worked as mern stack to build end-to-end chatbot for customer to communicate or place order. Worked on add-cart, managing state using redux, and fixed bugs",
-    icon: React.createElement(FaReact),
+    icon: createElement(FaReact),
     date: "2021 - 2022",
   },
   {
@@ -101,7 +108,7 @@ export const experiencesData = [
     title: "Full-stack developer",
     description:
       "Worked as a developer to build a backend API to interact with the mobile app, and also built an admin panel UI with APIs to interact with the database.",
-    icon: React.createElement(FaReact),
+    icon: createElement(FaReact),
     date: "2020 - 2021",
   },
   {
@@ -109,7 +116,7 @@ export const experiencesData = [
     title: "Full-stack developer",
     description:
       "Worked as a developer to build a backend API to interact with the mobile app, and also built an admin panel UI with APIs to interact with the database.",
-    icon: React.createElement(FaReact),
+    icon: createElement(FaReact),
     date: "2019 - 2020",
   },
 ] as const;
