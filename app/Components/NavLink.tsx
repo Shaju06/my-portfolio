@@ -7,10 +7,12 @@ import clsx from "clsx";
 type NavLinkPropsTypes = {
   href: string;
   title: "Home" | "Projects" | "Skills" | "Experience" | "Contact";
+  toggleMobileMenu?: () => void;
+  Icon?: any;
 };
 
 const NavLink: FC<NavLinkPropsTypes> = (props) => {
-  const { href, title } = props;
+  const { href, title, toggleMobileMenu, Icon } = props;
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveLinkContext();
 
@@ -25,18 +27,20 @@ const NavLink: FC<NavLinkPropsTypes> = (props) => {
         className={clsx(
           `flex w-full items-center justify-center px-3 py-3 hover:text-light-accent  dark:text-dark-Accent/90 dark:hover:text-dark-Accent transition-all hover:scale-110`,
           {
-            "text-light-accent dark:text-dark-accent": activeSection === title,
+            // "text-light-accent dark:text-dark-accent": activeSection === title,
           }
         )}
         onClick={() => {
           setActiveSection(title);
           setTimeOfLastClick(Date.now());
+          toggleMobileMenu && toggleMobileMenu();
         }}
       >
+        {Icon && <Icon className="mr-1" />}
         {title}
-        {title === activeSection && (
+        {/* {title === activeSection && (
           <motion.span
-            className="bg-primary opacity-1 backdrop-blur rounded-3xl  absolute  inset-0 -z-10 "
+            className="bg-primary opacity-1 backdrop-blur rounded-3xl  absolute pl-2  inset-0 -z-10 "
             layoutId="activeSection"
             transition={{
               type: "spring",
@@ -44,7 +48,7 @@ const NavLink: FC<NavLinkPropsTypes> = (props) => {
               damping: 30,
             }}
           />
-        )}
+        )} */}
       </Link>
     </motion.li>
   );
