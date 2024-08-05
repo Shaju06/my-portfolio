@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";

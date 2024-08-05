@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, createContext, useContext } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "";
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;
@@ -13,12 +13,12 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
-const ThemeContext = createContext<ThemeContextType | null>(null);
+const ThemeContext = createContext<ThemeContextType | "">("");
 
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme | "">("");
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -35,7 +35,7 @@ export default function ThemeContextProvider({
   useEffect(() => {
     const localTheme =
       typeof window !== "undefined"
-        ? (window.localStorage.getItem("theme") as Theme | "light")
+        ? (window.localStorage.getItem("theme") as Theme | "")
         : "light";
 
     if (localTheme) {

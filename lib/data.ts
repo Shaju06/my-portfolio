@@ -57,10 +57,17 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: "CorpComment",
+    title: "Url Shortner",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Designed and implemented a URL shortener application that converts lengthy web addresses into compact, easy-to-share links. Integrated features include click tracking analytics.",
+    tags: [
+      "React",
+      "Next.js",
+      "Supabase",
+      "Tailwind",
+      "Server action",
+      "React chartjs",
+    ],
     imageUrl: corpcommentImg,
   },
   {
