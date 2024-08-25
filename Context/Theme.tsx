@@ -13,7 +13,7 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
-const ThemeContext = createContext<ThemeContextType | "">("");
+const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export default function ThemeContextProvider({
   children,
