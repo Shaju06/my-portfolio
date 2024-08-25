@@ -64,27 +64,19 @@ const Hero = () => {
                 {typingText}
               </h1>
             </motion.div>
-            {/* <h1 className="text-xxl text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
-              Full Stack
-            </h1> */}
-            {/* <div className=" grid grid-cols-2 gap-4 mt-[100px] relative"> */}
-            <p className="">
-              I am &nbsp;
-              <span className="font-bold text-light-Primary/80 dark:text-dark-Primary">
-                Full-stack Developer &nbsp;
-              </span>
-              based in India, skilled at crafting websites and applications
-              using React, Next, JavaScript, TypeScript, Express and MongoDB,
-              though I am very capable of learning new skills fast and happy to
-              work in any environment.
-              <br />
+            <p className="md:leading-9 leading-8 md:text-md text-md">
+              Hi there! My name is Varinder Pal Singh and I’m a software
+              engineer with over 5 years of experience in the industry. skilled
+              at crafting websites and applications using React, Next,
+              JavaScript, TypeScript, Express and MongoDB, though I am very
+              capable of learning new skills fast and happy to work in any
+              environment.
+              {/* <br />
               <br />
               My greatest strengths are in Front End. I have excellent
               commercial experience in this area, with a keen interest to expand
-              my skillset in a diverse range of technologies.
+              my skillset in a diverse range of technologies. */}
             </p>
-
-            {/* </div> */}
           </motion.div>
         </div>
         <motion.div
@@ -114,14 +106,14 @@ const Hero = () => {
             <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
           </Link>
           <Link
-            className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60"
             href="https://www.linkedin.com/in/varinder-pal-singh-4896b743/"
             target="_blank"
           >
             <BsLinkedin />
           </Link>
           <Link
-            className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60"
             href="https://github.com/Shaju06"
             target="_blank"
           >
