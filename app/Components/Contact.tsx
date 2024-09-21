@@ -31,12 +31,12 @@ const Contact = () => {
     >
       <SectionHeading>Contact Me</SectionHeading>
       <div className="flex justify-center">
-        <div className=" flex justify-center gap-2 items-center  border border-black/5 dark:border-zinc-800 md:rounded-3xl rounded-xl md:p-[1.5rem] p-[1rem]   dark:text-white/80">
+        <div className=" flex justify-center gap-2 items-center  border-2 border-primary md:rounded-3xl rounded-xl md:p-[1.5rem] p-[1rem]   dark:text-white/80">
           <Link
             href="mailto:Varipaul@gmail.com"
             className="flex justify-center items-center gap-2"
           >
-            <p className="bg-white border border-black/5 md:p-4 p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
+            <p className="bg-white border border-primary md:p-4 p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
               <MdOutlineEmail />
             </p>
             <p className="mr-2">Varipaul@gmail.com </p>
@@ -46,7 +46,7 @@ const Contact = () => {
             className="flex justify-center items-center gap-2"
             target="_blank"
           >
-            <p className="bg-white border border-black/5 md:p-4 p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
+            <p className="bg-white border border-primary md:p-4 p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
               {" "}
               <BsLinkedin />
             </p>

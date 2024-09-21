@@ -32,30 +32,27 @@ const Experience = () => {
                 background:
                   theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
+                border: "3px solid #22c55e",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
                 borderRight:
-                  theme === "light"
-                    ? "0.4rem solid #9ca3af"
-                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                  theme === "light" ? "0.4rem solid #9ca3af" : "0.4rem solid ",
               }}
-              date={item.date}
               icon={item.icon}
               iconStyle={{
                 background: "#22c55e",
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold text-gray-700 dark:text-white/75 capitalize">
+              <h3 className="font-bold text-xl text-primary capitalize">
                 {item.comapany}
               </h3>
-              <p className="font-normal !mt-0 text-gray-700 dark:text-white/75">
-                {item.title}
+              <p className="font-bold  text-gray-700 dark:text-white/75">
+                {item.title} <span className=" text-sm">| {item.date} </span>
               </p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <p className=" !font-normal text-gray-500 dark:text-white/50">
                 {item.description}
               </p>
             </VerticalTimelineElement>

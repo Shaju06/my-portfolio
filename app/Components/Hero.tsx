@@ -60,7 +60,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-xxl text-light-Primary/80 text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
+              <h1 className="text-xxl text-primary text-center md:text-5xl font-black leading-none pb-4 md:pb-8">
                 {typingText}
               </h1>
             </motion.div>
@@ -88,7 +88,7 @@ const Hero = () => {
           }}
         >
           <Link
-            className="bg-primary group rounded-full text-white px-7 py-3 flex items-center focus:scale-110 hover:scale-110 hover:bg-hover-primary"
+            className="bg-primary border border-primary group rounded-full text-white px-7 py-3 flex items-center hover:scale-[1.05] duration-300"
             href="#contact-us"
             onClick={() => {
               setActiveSection("Contact");
@@ -96,24 +96,24 @@ const Hero = () => {
             }}
           >
             Contact me here
-            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+            <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition duration-300" />
           </Link>
           <Link
             href="#"
-            className="group  border border-black/5  dark:text-white dark:bg-white/10 flex justify-center items-center gap-2 px-7 py-3 rounded-full outline-none"
+            className="group  border border-primary dark:text-white dark:bg-white/10  hover:scale-[1.05] duration-300 flex justify-center items-center gap-2 px-7 py-3 rounded-full outline-none"
           >
             Download Resume
-            <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+            <HiDownload className="opacity-60 group-hover:translate-y-1 transition duration-300" />
           </Link>
           <Link
-            className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60"
+            className="bg-white border border-primary p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full  hover:scale-[1.15]  transition duration-300 cursor-pointer  dark:bg-white/10 dark:text-white/60"
             href="https://www.linkedin.com/in/varinder-pal-singh-4896b743/"
             target="_blank"
           >
             <BsLinkedin />
           </Link>
           <Link
-            className="bg-white border border-black/5 p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60"
+            className="bg-white border border-primary p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full  hover:scale-[1.15]  transition duration-300 cursor-pointer  dark:bg-white/10 dark:text-white/60"
             href="https://github.com/Shaju06"
             target="_blank"
           >

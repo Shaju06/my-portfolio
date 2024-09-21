@@ -34,8 +34,8 @@ const MobileMenuBar: FC<MobileMenuBarPropTypes> = ({ links }) => {
               onClick={toggleMobileMenu}
             ></div>
 
-            <div className="h-screen fixed left-0 w-[300px] top-0 right-0 bg-white dark:bg-black flex items-center justify-center">
-              <div className="border absolute top-4 right-4 border-gray-600 dark:border-white text-2xl">
+            <div className="h-screen fixed left-0 w-[300px] top-0 right-0 bg-white dark:bg-dark-background flex items-center justify-center">
+              <div className="border-2 absolute top-4 right-4 border-primary text-primary text-2xl">
                 <HiX onClick={toggleMobileMenu} />
               </div>
               <ul className="flex flex-col space-y-4 items-center py-20">

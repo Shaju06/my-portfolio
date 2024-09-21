@@ -43,7 +43,7 @@ const config: Config = {
           "text-color": "#6366f1",
         },
         dark: {
-          background: "#0a0a0a",
+          background: "#172554",
           Primary: "#16a34a",
           Secondary: "#4f46e5",
           Accent: "#e2e8f0",
@@ -57,6 +57,6 @@ const config: Config = {
     },
   },
   plugins: [],
-  darkMode: "class",
+  darkMode: ["class"],
 };
 export default config;
