@@ -90,25 +90,25 @@ export const experiencesData = [
   {
     comapany: "Sapiens Technologies",
     title: "Software developer",
-    description: `I'm working as software developer mainly on nextjs and mongodb. Responsible to design and develope inaurance related features to the products.`,
+    description: `Currently working as a Software Developer, specializing in Next.js and MongoDB. Responsible for designing and developing reusable components, which are packaged and distributed as npm libraries to streamline project development. Actively involved in optimizing performance, enhancing user experiences, and collaborating with cross-functional teams to deliver scalable solutions`,
     icon: createElement(CgWorkAlt),
-    date: "2023 - present",
+    date: "Sep 2023 - present",
   },
   {
     comapany: "Trantor software pvt ltd",
     title: "Frontend developer",
     description:
-      "Worked as frontend dev, migrated backbone product to nextjs and implement new feature to it from the scratch.",
+      "Worked as a Frontend Developer, leading the migration of a Backbone.js-based GRC portal to Next.js and implementing new features from the ground up. Played a key role in guiding the team through research and development of reusable components and efficient deployment strategies.",
     icon: createElement(CgWorkAlt),
-    date: "2022 - 2023",
+    date: "Jan 2022 - Sep 2023",
   },
   {
     comapany: "Destm technologies",
     title: "Full-stack developer",
     description:
-      "Worked as mern stack to build end-to-end chatbot for customer to communicate or place order. Worked on add-cart, managing state using redux, and fixed bugs",
+      "Worked as mern stack to build end-to-end chatbot for customer to communicate or place order. Worked on add-cart, managing state using redux, and fixed bugs.",
     icon: createElement(FaReact),
-    date: "2021 - 2022",
+    date: "Mar 2021 - Jan 2022",
   },
   {
     comapany: "Henceforth Solutions",
@@ -116,7 +116,7 @@ export const experiencesData = [
     description:
       "Worked as a developer to build a backend API to interact with the mobile app, and also built an admin panel UI with APIs to interact with the database.",
     icon: createElement(FaReact),
-    date: "2020 - 2021",
+    date: "Aug 2020 - Mar 2021",
   },
   {
     comapany: "Brightroots software soultions",
@@ -124,6 +124,6 @@ export const experiencesData = [
     description:
       "Worked as a developer to build a backend API to interact with the mobile app, and also built an admin panel UI with APIs to interact with the database.",
     icon: createElement(FaReact),
-    date: "2019 - 2020",
+    date: "Sep 2019 - Apr 2020",
   },
 ] as const;
