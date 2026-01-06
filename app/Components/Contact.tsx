@@ -1,15 +1,13 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import SectionHeading from "./SectionHeading";
-import { useSectionInView } from "@/lib/customHooks";
-import { MdOutlineEmail } from "react-icons/md";
-import { BsLinkedin } from "react-icons/bs";
-import Link from "next/link";
+import { useSectionInView } from '@/lib/customHooks';
+import { motion } from 'framer-motion';
+import { BsLinkedin } from 'react-icons/bs';
+import { MdOutlineEmail } from 'react-icons/md';
+import SectionHeading from './SectionHeading';
 
 const Contact = () => {
-  const { ref } = useSectionInView("Contact");
+  const { ref } = useSectionInView('Contact');
 
   return (
     <motion.section
@@ -30,29 +28,48 @@ const Contact = () => {
       }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <div className="flex justify-center">
-        <div className=" flex justify-center gap-2 items-center  border-2 border-primary md:rounded-3xl rounded-xl md:p-[1.5rem] p-[1rem]   dark:text-white/80">
-          <Link
-            href="mailto:Varipaul@gmail.com"
-            className="flex justify-center items-center gap-2"
-          >
-            <p className="bg-white border border-primary md:p-4 p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
-              <MdOutlineEmail />
-            </p>
-            <p className="mr-2">Varipaul@gmail.com </p>
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/varinder-pal-singh-4896b743/"
-            className="flex justify-center items-center gap-2"
-            target="_blank"
-          >
-            <p className="bg-white border border-primary md:p-4 p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer  dark:bg-white/10 dark:text-white/60">
-              {" "}
-              <BsLinkedin />
-            </p>
-            <p>Linkedin</p>
-          </Link>
-        </div>
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
+        Please contact me directly at{' '}
+        <a
+          className="underline"
+          href="mailto:Varipaul@gmail.com"
+        >
+          Varipaul@gmail.com
+        </a>{' '}
+        or through this form.
+      </p>
+
+      <div className="mt-10 flex flex-col sm:flex-row gap-8 justify-center items-center w-full max-w-2xl px-4">
+        <a
+          href="mailto:Varipaul@gmail.com"
+          className="w-full sm:w-1/2 bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 p-6 rounded-2xl border border-black/5 flex flex-col items-center justify-center gap-3 transition-all group hover:scale-[1.02]"
+        >
+          <div className="bg-white dark:bg-white/10 p-4 rounded-full text-2xl shadow-sm group-hover:scale-110 transition">
+            <MdOutlineEmail />
+          </div>
+          <div className="text-lg font-medium">
+            Email Me
+          </div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            Varipaul@gmail.com
+          </div>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/varinder-pal-singh-4896b743/"
+          target="_blank"
+          className="w-full sm:w-1/2 bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 p-6 rounded-2xl border border-black/5 flex flex-col items-center justify-center gap-3 transition-all group hover:scale-[1.02]"
+        >
+          <div className="bg-white dark:bg-white/10 p-4 rounded-full text-2xl shadow-sm text-[#0077b5] group-hover:scale-110 transition">
+            <BsLinkedin />
+          </div>
+          <div className="text-lg font-medium">
+            LinkedIn
+          </div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            Connect professionally
+          </div>
+        </a>
       </div>
     </motion.section>
   );
