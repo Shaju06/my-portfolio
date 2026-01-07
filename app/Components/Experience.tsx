@@ -31,40 +31,42 @@ const Experience = () => {
               contentStyle={{
                 background:
                   theme === 'light'
-                    ? '#f3f4f6'
-                    : 'rgba(255, 255, 255, 0.05)',
-                boxShadow: 'none',
-                border: '1px solid rgba(0, 0, 0, 0.05)',
-                textAlign: 'left',
-                padding: '1.3rem 2rem',
+                    ? "rgba(255, 255, 255, 0.6)" // Glass effect light
+                    : "rgba(255, 255, 255, 0.05)", // Glass effect dark
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                backdropFilter: "blur(5px)",
+                border: "1px solid rgba(255, 255, 255, 0.3)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
+                borderRadius: "1rem", // Softer corners
               }}
               contentArrowStyle={{
                 borderRight:
                   theme === 'light'
-                    ? '0.4rem solid #9ca3af'
-                    : '0.4rem solid rgba(255, 255, 255, 0.5)',
+                    ? "0.4rem solid rgba(255, 255, 255, 0.6)"
+                    : "0.4rem solid rgba(255, 255, 255, 0.05)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
                 background:
                   theme === 'light'
-                    ? 'white'
-                    : 'rgba(255, 255, 255, 0.15)',
-                fontSize: '1.5rem',
-                color:
-                  theme === 'light' ? '#1f2937' : '#e5e7eb',
-                backdropFilter: 'blur(8px)',
+                    ? "rgba(255, 255, 255, 0.9)"
+                    : "rgba(255, 255, 255, 0.15)",
+                fontSize: "1.5rem",
+                color: theme === 'light' ? "#1f2937" : "#e5e7eb",
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                backdropFilter: "blur(5px)",
               }}
               className="vertical-timeline-element--work"
             >
-              <h3 className="font-semibold capitalize dark:text-white/90">
+              <h3 className="font-bold text-xl capitalize dark:text-white/90">
                 {item.title}
               </h3>
-              <p className="font-normal !mt-0 dark:text-white/70">
+              <p className="font-medium text-gray-700 dark:text-white/75 !mt-0">
                 {item.comapany}
               </p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/50">
+              <p className="!mt-4 !font-normal text-gray-600 dark:text-white/60 leading-relaxed">
                 {item.description}
               </p>
             </VerticalTimelineElement>

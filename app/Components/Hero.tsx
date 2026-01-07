@@ -1,8 +1,8 @@
 'use client';
 import { useActiveLinkContext } from '@/Context/ActiveLinkContext';
 import {
-  useSectionInView,
-  useTypingText,
+    useSectionInView,
+    useTypingText,
 } from '@/lib/customHooks';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -26,7 +26,7 @@ const Hero = () => {
       <section
         ref={ref}
         id="home-section"
-        className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+        className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] relative overflow-hidden px-4"
       >
         <div className="flex items-center justify-center">
           <div className="absolute top-[-10rem] -z-10 right-[0rem] h-[20rem] w-[20rem] rounded-full blur-[5rem] sm:w-[40rem] dark:bg-primary/20 bg-blue-200/30 animate-blob mix-blend-multiply filter opacity-70"></div>

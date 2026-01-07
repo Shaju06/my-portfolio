@@ -42,7 +42,7 @@ const Contact = () => {
       <div className="mt-10 flex flex-col sm:flex-row gap-8 justify-center items-center w-full max-w-2xl px-4">
         <a
           href="mailto:Varipaul@gmail.com"
-          className="w-full sm:w-1/2 bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 p-6 rounded-2xl border border-black/5 flex flex-col items-center justify-center gap-3 transition-all group hover:scale-[1.02]"
+          className="w-full sm:w-1/2 bg-gray-100/50 backdrop-blur-sm hover:bg-gray-200/50 dark:bg-white/10 dark:hover:bg-white/20 p-6 rounded-2xl border border-black/5 flex flex-col items-center justify-center gap-3 transition-all group hover:scale-[1.02]"
         >
           <div className="bg-white dark:bg-white/10 p-4 rounded-full text-2xl shadow-sm group-hover:scale-110 transition">
             <MdOutlineEmail />
@@ -58,7 +58,7 @@ const Contact = () => {
         <a
           href="https://www.linkedin.com/in/varinder-pal-singh-4896b743/"
           target="_blank"
-          className="w-full sm:w-1/2 bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 p-6 rounded-2xl border border-black/5 flex flex-col items-center justify-center gap-3 transition-all group hover:scale-[1.02]"
+          className="w-full sm:w-1/2 bg-gray-100/50 backdrop-blur-sm hover:bg-gray-200/50 dark:bg-white/10 dark:hover:bg-white/20 p-6 rounded-2xl border border-black/5 flex flex-col items-center justify-center gap-3 transition-all group hover:scale-[1.02]"
         >
           <div className="bg-white dark:bg-white/10 p-4 rounded-full text-2xl shadow-sm text-[#0077b5] group-hover:scale-110 transition">
             <BsLinkedin />
